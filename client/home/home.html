@@ -1,0 +1,49 @@
+<template name="home">
+	<div class="container bus-list">
+		<div class="row bus-list__row bus-list__header">
+			<div class="bus-list__row__col col-md-3">Bus</div>
+			<div class="bus-list__row__col col-md-1">Available seats</div>
+			<div class="bus-list__row__col col-md-1">Start point</div>
+			<div class="bus-list__row__col col-md-1">End point</div>
+			<div class="bus-list__row__col col-md-2">Start time</div>
+			<div class="bus-list__row__col col-md-2">Reaching time</div>
+			<div class="bus-list__row__col col-md-1">Fare</div>
+			<div class="bus-list__row__col last col-md-1">Book</div>
+		</div>
+		<div class="row bus-list__body">
+		{{#if hasItem}}
+			{{#each list}}
+			<div class="bus-list__row">
+				<div class="bus-list__row__col col-md-3">{{name}}<br />{{agency}}</div>
+				<div class="bus-list__row__col col-md-1">{{available_seats}}/{{seats}}</div>
+				<div class="bus-list__row__col col-md-1">{{source}}</div>
+				<div class="bus-list__row__col col-md-1">{{destination}}</div>
+				<div class="bus-list__row__col col-md-2">{{humanReadableDate startDateTime}}</div>
+				<div class="bus-list__row__col col-md-2">{{humanReadableDate endDateTime}}</div>
+				<div class="bus-list__row__col col-md-1">{{fare}}</div>
+				<div class="bus-list__row__col last col-md-1"><a href="/book/{{_id}}">Book</a></div>
+			</div>
+			<div class="clear"></div>
+			{{/each}}
+		{{else}}
+			<div class="row bus-list__row bus-list__row-empty">
+				<div class="bus-list__row__col last col-md-12 text-center">No buses found</div>
+			</div>
+		{{/if}}
+		</div>
+	</div>
+</template>
+<template name="travelSearch">
+	<div class="col-xs-12 col-sm-12 col-md-12 text-center top-space well well-sm">
+	Search
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 well well-sm">
+    	<div class="form" id="signup-form">
+            <div class="error"></div>
+            <input class="form-control" name="startpoint" placeholder="Source(starting from)" type="text" required="">
+            <input class="form-control" name="endpoint" placeholder="Destination" type="text" required="">
+            <input class="form-control" name="startdate" placeholder="Date" type="date" required="">
+            <input class="form-control" name="fare" placeholder="Max prize" type="number" required="">
+        </div>
+	</div>
+</template>

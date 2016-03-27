@@ -1,0 +1,21 @@
+<template name="homeLayout">
+	<div class="home-container">
+		<header class="header">
+			<h1>{{#linkTo route="home"}}Booking{{/linkTo}}</h1>
+			<ul class="nav nav-pills">
+				<li>
+					{{#linkTo route="createTravel"}}Create{{/linkTo}}	
+				</li>
+			</ul>
+		</header>
+		<section class="home-container__section">
+			<div class="home-container__section__left container-fluid">
+			    {{> yield region="search"}}
+		  	</div>
+		  	<div class="main">
+			    {{> yield}}
+		  	</div>
+		</section>
+		<footer class="footer">Copyright @Booking</footer>
+	</div>
+</template>

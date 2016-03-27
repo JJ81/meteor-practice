@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+.header,
+.footer{
+    flex: 0 1 auto;
+    height:60px;
+    border-top:1px solid #ccc;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header{
+    border-bottom: 1px solid #aaa;
+}
+
+.header h1{
+    margin: 0;
+}
+
+.footer{
+    height: 40px;
+    text-align: center;
+    justify-content:center;
+}
+
+.home-container,
+.create-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container__section,
+.create-container__section{
+    display: flex;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+.home-container__section__left{
+    flex: 1 1 auto;
+    -webkit-box-shadow: inset 0 0 4px 1px #ccc;
+    -moz-box-shadow: inset 0 0 4px 1px #ccc;
+    box-shadow: inset 0 0 4px 1px #ccc;
+}
+
+.main{
+    overflow:auto;
+}
+
+.bus-list{
+    margin: auto;
+}
+
+.bus-list__header{
+    background-color:#ddd;
+    height:45px;
+}
+
+.bus-list__row{
+    border-bottom:1px solid #ccc;
+    height: 50px;
+}
+
+.bus-list__row-empty{
+    padding: 20px;
+}
+
+.bus-list__row__col{
+    text-align:center;
+    border-right: 1px;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bus-list__row__col.last{
+    border: 0;
+}
+
+.bus-list__body{
+    background:#efefef;
+}
+
+.account-container__row{
+    margin-top: 7em;
+}
+
+.busView{
+    display:flex;
+    flex-direction:column;
+    padding:20px 0;
+}
+
+.busView__title{
+    flex:0 1 auto;
+    height: 50px;
+}
+
+.busView__seats{
+    margin: 0 auto;
+}
+
+.busView__left,
+.busView__right{
+    border:1px solid #ccc;
+}
+
+.busView__book{
+    padding-top: 2em;
+}
+
+.busView_seat{
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+    width: 25px;
+    border:1px solid #ccc;
+    margin:13px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.busView_seat.block{
+    background-color: green;
+}
+
+.busView_seat.reserved{
+    background: red;
+}
+
+.busView__divider{
+    display:inline-block;
+}
+
+.busView__divider:last-child{
+    display: none;
+}
+
+.top-space{
+    margin-top: 5em;
+}
+
+.error{
+    color: red;
+    padding-bottom: 10px;
+}
+
+.clear{
+    clear:both;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}

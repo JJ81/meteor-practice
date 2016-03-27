@@ -1,0 +1,20 @@
+<template name="bookTravel">
+	<div class="container busView">
+		<div class="row text-center busView__title">{{bus.name}}<br />{{bus.agency}}</div>
+		<div class="row col-md-4 busView__seats">
+			<div class="col-md-12 busView__left">
+			{{#each seatArrangement}}
+				<div class="col-md-12 row-fluid">
+				{{#each this}}
+				<div id="seat{{this.seat}}" class="busView__seat {{blocked}} {{reserved}}">{{this.seat}}</div>
+				{{#if middleRow}}
+					<div class="busView__divider col-md-offset-3"></div>
+				{{/if}}
+				{{/each}}
+				</div>
+			{{/each}}
+			</div>			
+		</div>
+		<div class="row text-center busView__book"><button id="book" class="btn btn-primary">Book My Seats</button></div>
+	</div>
+</template>
