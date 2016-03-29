@@ -18,12 +18,14 @@ Template.createTravel.events({
 			return false;
 		}
 		//Server call to persist the data. 
-		Meteor.call("createBusService", busService, function(error, result) {
-			if(error) {
-				$(e.target).find(".error").html(error.reason);
-			} else {
-				Router.go("/");	
-			}
+		Meteor.call("createBusService", busService,
+            function(error, result) {
+                if(error) {
+                    // 에러 메시지 출력
+                    $(e.target).find(".error").html(error.reason);
+                } else {
+                    Router.go("/");
+                }
 		});
 	}
 });

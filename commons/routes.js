@@ -13,8 +13,9 @@ Router.route('/', {
     name: 'home',
     layoutTemplate: 'homeLayout',
     template: 'home',
-    yieldRegions: { // what is this key?
-        travelSearch: {to: 'search'}
+    yieldRegions: {
+        // 템플릿 이름 -> 공통 템플릿 내에 위치한 영역이름
+        travelSearch: {to: 'searchArea'}
     }
 });
 

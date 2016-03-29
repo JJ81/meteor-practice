@@ -2,19 +2,20 @@
 	<div class="row col-md-6 col-md-offset-3 top-space">
         <div class="col-xs-12 col-sm-12 col-md-12 well well-sm">
             <form action="#" method="post" class="form" id="signup-form" role="form">
+                <!-- 에러발생시 뷰 처리 -->
             	<div class="error"></div>
 	            <input class="form-control" name="name" placeholder="Name" type="text" autofocus required />
-       	<input class="form-control" name="agency" placeholder="Agency Name" required />
+       	        <input class="form-control" name="agency" placeholder="Agency Name" required />
             	<input class="form-control" name="seats" min="10" placeholder="No. of Seats" type="number" required />
             	<div class="row">
                 	<div class="col-xs-6 col-md-6"><input class="form-control" name="startpoint" placeholder="Source(starting from)" type="text" required /></div>
                 	<div class="col-xs-6 col-md-6"><input class="form-control" name="endpoint" placeholder="Destination" type="text" required /></div>
             	</div>
-           	<div class="row">
-                		<div class="col-xs-3 col-md-3"><input class="form-control" name="startdate" placeholder="Departure date" type="date" required /></div>
-			<div class="col-xs-3 col-md-3"><input class="form-control" name="starttime" placeholder="Departure time" type="time" required /></div>
-			<div class="col-xs-3 col-md-3"> <input class="form-control" name="enddate" placeholder="Arrival date" type="date" required /></div>
- 			<div class="col-xs-3 col-md-3"><input class="form-control" name="endtime" placeholder="Arrival time" type="time" required /></div>
+           	    <div class="row">
+                    <div class="col-xs-3 col-md-3"><input class="form-control" name="startdate" placeholder="Departure date" type="date" required /></div>
+                    <div class="col-xs-3 col-md-3"><input class="form-control" name="starttime" placeholder="Departure time" type="time" required /></div>
+                    <div class="col-xs-3 col-md-3"> <input class="form-control" name="enddate" placeholder="Arrival date" type="date" required /></div>
+                    <div class="col-xs-3 col-md-3"><input class="form-control" name="endtime" placeholder="Arrival time" type="time" required /></div>
             	</div>
             	<input class="form-control" name="fare" min="100" placeholder="Ticket prize(Min 100)" type="number" required />
             	<button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
